@@ -1,6 +1,9 @@
 board = [0]*9
 game_is_over = False
 
+player_one = 'x'
+player_two = 'o'
+
 def board_print():
     print [board[0],board[1],board[2]]
     print [board[3],board[4],board[5]]
@@ -66,36 +69,19 @@ def turn_end():
     if winner_check():
         game_is_over = True
 
-def x_turn():
-    global game_is_over
-    x_moves = input("Player x, indicate your position using an index number.")
-    if x_moves not in range(9):
-        while True:
-            x_moves = input("Choose an integer from 0 to 8.")
-            if x_moves in range(9):
-                break
-    if board[x_moves] != 0:
-        x_moves = input("Space is already taken; choose another.")
-    board[x_moves] = 'x'
-    turn_end()
-
-def o_turn():
-    global game_is_over
-    o_moves = input("Player o, indicate your position using an index number.")
-    if o_moves not in range(9):
-        while True:
-            o_moves = input("Choose an integer from 0 to 8.")
-            if o_moves in range(9):
-                break
-    if board[o_moves] != 0:
-        o_moves = input("Space is already taken; choose another.")
-    board[o_moves] = 'o'
+def player_turn(player):
+    moves = input("Player {}, indicate your position using an index number.".format(player))
+    while moves not in range(9):
+        moves = input("Choose an integer from 0 to 8.")
+    if board[moves] != 0:
+        moves = input("Space is already taken; choose another.")
+    board[moves] = player
     turn_end()
 
 while not game_is_over:
-    x_turn()
+    player_turn(player_one)
     if game_is_over:
         break
-    o_turn()
+    player_turn(player_two)
 
 
