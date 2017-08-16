@@ -1,1 +1,1 @@
-Hello! Welcome to my site.
+Hello! I'm Daniel Libatique, a graduate student in Classical Studies at Boston University.
