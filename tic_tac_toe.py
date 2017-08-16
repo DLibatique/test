@@ -1,7 +1,7 @@
 def board_print(board):
-    print [board[0],board[1],board[2]]
-    print [board[3],board[4],board[5]]
-    print [board[6],board[7],board[8]]
+    print board[0:3]
+    print board[3:6]
+    print board[6:9]
 
 def winner_check(player, board):
     wins = [[0,1,2], # top row
@@ -12,8 +12,8 @@ def winner_check(player, board):
             [2,5,8], # right column
             [0,4,8], # left to right diagonal
             [2,4,6]] # right to left diagonal
-    for w in wins:
-        if board[w[0]] == board[w[1]] == board[w[2]] == player:
+    for a,b,c in wins:
+        if board[a] == board[b] == board[c] == player:
             return True, player
     return board.count(0) == 0, "draw"
 
