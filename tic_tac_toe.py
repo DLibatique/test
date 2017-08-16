@@ -34,7 +34,7 @@ def player_turn(player, board):
     if board[moves] != 0:
         moves = input("Space is already taken; choose another.")
     board[moves] = player
-    return turn_end(player, board)
+    return board
 
 def next_player(current):
     return 'x' if 'x' == current else 'y'
@@ -47,7 +47,8 @@ def main():
     game_is_over = False
     current_player = player_one
     while not game_is_over:
-        game_is_over = player_turn(current_player, board)
+        board = player_turn(current_player, board)
+        game_is_over = turn_end(current_player, board)
         current_player = player_one if current_player == player_two else player_two
     
 
