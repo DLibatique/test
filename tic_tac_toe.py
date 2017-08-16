@@ -1,101 +1,51 @@
-board = [0]*9
-game_is_over = False
+def board_print(board):
+    print board[0:3]
+    print board[3:6]
+    print board[6:9]
 
-def board_print():
-	print [board[0],board[1],board[2]]
-	print [board[3],board[4],board[5]]
-	print [board[6],board[7],board[8]]
+def winner_check(player, board):
+    wins = ((0,1,2), # top row
+            (3,4,5), # middle row
+            (6,7,8), # bottom row
+            (0,3,6), # left column
+            (1,4,7), # middle column
+            (2,5,8), # right column
+            (0,4,8), # left to right diagonal
+            (2,4,6)) # right to left diagonal
+    for a,b,c in wins:
+        if board[a] == board[b] == board[c] == player:
+            return True, player
+    return board.count(0) == 0, "draw"
 
-def winner_check():
-	if board[0] == board[1] == board[2] == 'x':
-		print 'Player x wins!'
-		return True
-	elif board[3] == board[4] == board[5] == 'x':
-		print 'Player x wins!'
-		return True
-	elif board[6] == board[7] == board[8] == 'x':
-		print 'Player x wins!'
-		return True
-	elif board[0] == board[3] == board[6] == 'x':
-		print 'Player x wins!'
-		return True
-	elif board[1] == board[4] == board[7] == 'x':
-		print 'Player x wins!'
-		return True
-	elif board[2] == board[5] == board[8] == 'x':
-		print 'Player x wins!'
-		return True
-	elif board[0] == board[4] == board[8] == 'x':
-		print 'Player x wins!'
-		return True
-	elif board[2] == board[4] == board[6] == 'x':
-		print 'Player x wins!'
-		return True
-	elif board[0] == board[1] == board[2] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[3] == board[4] == board[5] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[6] == board[7] == board[8] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[0] == board[3] == board[6] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[1] == board[4] == board[7] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[2] == board[5] == board[8] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[0] == board[4] == board[8] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[2] == board[4] == board[6] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board.count(0) == 0:
-		print 'The game is a tie.'
-		return True
+def turn_end(player, board):
+    board_print(board)
+    game_is_over, winner = winner_check(player, board)
+    if game_is_over:
+        if winner == "draw":
+            print "The game is a tie"
 	else:
-		pass
+            print "Player {} wins!".format(winner)
+    return game_is_over
 
-def turn_end():
-	board_print()
-	if winner_check():
-		game_is_over = True
+def player_turn(player, board):
+    moves = input("Player {}, indicate your position using an index number.".format(player))
+    while moves not in range(9):
+        moves = input("Choose an integer from 0 to 8.")
+    if board[moves] != 0:
+        moves = input("Space is already taken; choose another.")
+    board[moves] = player
+    return board
 
-def x_turn():
-	global game_is_over
-	x_moves = input("Player x, indicate your position using an index number.")
-	if x_moves not in range(9):
-		while True:
-			x_moves = input("Choose an integer from 0 to 8.")
-			if x_moves in range(9):
-				break
-	if board[x_moves] != 0:
-		x_moves = input("Space is already taken; choose another.")
-	board[x_moves] = 'x'
-	turn_end()
+def main():
+    board = [0]*9
+    player_one = 'x'
+    player_two = 'y'
 
-def o_turn():
-	global game_is_over
-	o_moves = input("Player o, indicate your position using an index number.")
-	if o_moves not in range(9):
-		while True:
-			o_moves = input("Choose an integer from 0 to 8.")
-			if o_moves in range(9):
-				break
-	if board[o_moves] != 0:
-		o_moves = input("Space is already taken; choose another.")
-	board[o_moves] = 'o'
-	turn_end()
-
-while not game_is_over:
-	x_turn()
-	if game_is_over:
-		break
-	o_turn()
-
-
+    game_is_over = False
+    current_player = player_one
+    while not game_is_over:
+        board = player_turn(current_player, board)
+        game_is_over = turn_end(current_player, board)
+        current_player = player_one if current_player == player_two else player_two
+    
+main()
