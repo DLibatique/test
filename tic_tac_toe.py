@@ -1,5 +1,4 @@
 board = [0]*9
-game_is_over = False
 
 player_one = 'x'
 player_two = 'o'
@@ -9,66 +8,29 @@ def board_print():
     print [board[3],board[4],board[5]]
     print [board[6],board[7],board[8]]
 
-def winner_check():
-    if board[0] == board[1] == board[2] == 'x':
-        print 'Player x wins!'
-        return True
-    elif board[3] == board[4] == board[5] == 'x':
-        print 'Player x wins!'
-        return True
-    elif board[6] == board[7] == board[8] == 'x':
-        print 'Player x wins!'
-        return True
-    elif board[0] == board[3] == board[6] == 'x':
-        print 'Player x wins!'
-        return True
-    elif board[1] == board[4] == board[7] == 'x':
-        print 'Player x wins!'
-        return True
-    elif board[2] == board[5] == board[8] == 'x':
-        print 'Player x wins!'
-        return True
-    elif board[0] == board[4] == board[8] == 'x':
-        print 'Player x wins!'
-        return True
-    elif board[2] == board[4] == board[6] == 'x':
-        print 'Player x wins!'
-        return True
-    elif board[0] == board[1] == board[2] == 'o':
-        print 'Player o wins!'
-        return True
-    elif board[3] == board[4] == board[5] == 'o':
-        print 'Player o wins!'
-        return True
-    elif board[6] == board[7] == board[8] == 'o':
-        print 'Player o wins!'
-        return True
-    elif board[0] == board[3] == board[6] == 'o':
-        print 'Player o wins!'
-        return True
-    elif board[1] == board[4] == board[7] == 'o':
-        print 'Player o wins!'
-        return True
-    elif board[2] == board[5] == board[8] == 'o':
-        print 'Player o wins!'
-        return True
-    elif board[0] == board[4] == board[8] == 'o':
-        print 'Player o wins!'
-        return True
-    elif board[2] == board[4] == board[6] == 'o':
-        print 'Player o wins!'
-        return True
-    elif board.count(0) == 0:
-        print 'The game is a tie.'
-        return True
-    else:
-        pass
+def winner_check(player):
+    wins = [[0,1,2], # top row
+            [3,4,5], # middle row
+            [6,7,8], # bottom row
+            [0,3,6], # left column
+            [1,4,7], # middle column
+            [2,5,8], # right column
+            [0,4,7], # left to right diagonal
+            [2,4,6]] # right to left diagonal
+    for w in wins:
+        if board[w[0]] == board[w[1]] == board[w[2]] == player:
+            return True, player
+    return board.count(0) == 0, "draw"
 
-def turn_end():
-    global game_is_over
+def turn_end(player):
     board_print()
-    if winner_check():
-        game_is_over = True
+    game_is_over, winner = winner_check(player)
+    if game_is_over:
+        if winner == "draw":
+            print "The game is a tie"
+	else:
+            print "Player {} wins!".format(winner)
+    return game_is_over
 
 def player_turn(player):
     moves = input("Player {}, indicate your position using an index number.".format(player))
@@ -77,12 +39,14 @@ def player_turn(player):
     if board[moves] != 0:
         moves = input("Space is already taken; choose another.")
     board[moves] = player
-    turn_end()
+    return turn_end(player)
 
-while not game_is_over:
-    player_turn(player_one)
+while True:
+    game_is_over = player_turn(player_one)
     if game_is_over:
         break
-    player_turn(player_two)
+    game_is_over = player_turn(player_two)
+    if game_is_over:
+        break
 
 
