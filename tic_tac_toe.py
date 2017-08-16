@@ -65,6 +65,7 @@ def winner_check():
         pass
 
 def turn_end():
+    global game_is_over
     board_print()
     if winner_check():
         game_is_over = True
