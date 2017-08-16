@@ -36,8 +36,6 @@ def player_turn(player, board):
     board[moves] = player
     return board
 
-def next_player(current):
-    return 'x' if 'x' == current else 'y'
 
 def main():
     board = [0]*9
