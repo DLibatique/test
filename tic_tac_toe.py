@@ -4,14 +4,14 @@ def board_print(board):
     print board[6:9]
 
 def winner_check(player, board):
-    wins = [[0,1,2], # top row
-            [3,4,5], # middle row
-            [6,7,8], # bottom row
-            [0,3,6], # left column
-            [1,4,7], # middle column
-            [2,5,8], # right column
-            [0,4,8], # left to right diagonal
-            [2,4,6]] # right to left diagonal
+    wins = ((0,1,2), # top row
+            (3,4,5), # middle row
+            (6,7,8), # bottom row
+            (0,3,6), # left column
+            (1,4,7), # middle column
+            (2,5,8), # right column
+            (0,4,8), # left to right diagonal
+            (2,4,6)) # right to left diagonal
     for a,b,c in wins:
         if board[a] == board[b] == board[c] == player:
             return True, player
@@ -36,7 +36,6 @@ def player_turn(player, board):
     board[moves] = player
     return board
 
-
 def main():
     board = [0]*9
     player_one = 'x'
@@ -49,7 +48,4 @@ def main():
         game_is_over = turn_end(current_player, board)
         current_player = player_one if current_player == player_two else player_two
     
-
 main()
-
-
