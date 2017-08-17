@@ -7,43 +7,42 @@ def board_print():
 	print [board[6],board[7],board[8]]
 
 def winner_check():
+	global game_is_over
 	if board[0] == board[1] == board[2]:
 		print 'Player {symbol} wins!'.format(symbol=board[0])
-		return True
+		game_is_over = True
 	elif board[3] == board[4] == board[5]:
 		print 'Player {symbol} wins!'.format(symbol=board[3])
-		return True
+		game_is_over = True
 	elif board[6] == board[7] == board[8]:
 		print 'Player {symbol} wins!'.format(symbol=board[6])
-		return True
+		game_is_over = True
 	elif board[0] == board[3] == board[6]:
 		print 'Player {symbol} wins!'.format(symbol=board[0])
-		return True
+		game_is_over = True
 	elif board[1] == board[4] == board[7]:
 		print 'Player {symbol} wins!'.format(symbol=board[1])
-		return True
+		game_is_over = True
 	elif board[2] == board[5] == board[8]:
 		print 'Player {symbol} wins!'.format(symbol=board[2])
-		return True
+		game_is_over = True
 	elif board[0] == board[4] == board[8]:
 		print 'Player {symbol} wins!'.format(symbol=board[0])
-		return True
+		game_is_over = True
 	elif board[2] == board[4] == board[6]:
 		print 'Player {symbol} wins!'.format(symbol=board[2])
-		return True
+		game_is_over = True
 	elif board.count(0) == 0:
 		print 'The game is a tie.'
-		return True
+		game_is_over = True
 	else:
 		pass
 
 def turn_end():
 	board_print()
-	if winner_check():
-		game_is_over = True
+	winner_check()
 
 def x_turn():
-	global game_is_over
 	x_moves = input("Player x, indicate your position using an index number.")
 	if x_moves not in range(9):
 		while True:
@@ -56,7 +55,6 @@ def x_turn():
 	turn_end()
 
 def o_turn():
-	global game_is_over
 	o_moves = input("Player o, indicate your position using an index number.")
 	if o_moves not in range(9):
 		while True:
