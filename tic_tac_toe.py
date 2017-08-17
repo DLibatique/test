@@ -7,53 +7,29 @@ def board_print():
 	print [board[6],board[7],board[8]]
 
 def winner_check():
-	if board[0] == board[1] == board[2] == 'x':
-		print 'Player x wins!'
+	if board[0] == board[1] == board[2]:
+		print 'Player {symbol} wins!'.format(symbol=board[0])
 		return True
-	elif board[3] == board[4] == board[5] == 'x':
-		print 'Player x wins!'
+	elif board[3] == board[4] == board[5]:
+		print 'Player {symbol} wins!'.format(symbol=board[3])
 		return True
-	elif board[6] == board[7] == board[8] == 'x':
-		print 'Player x wins!'
+	elif board[6] == board[7] == board[8]:
+		print 'Player {symbol} wins!'.format(symbol=board[6])
 		return True
-	elif board[0] == board[3] == board[6] == 'x':
-		print 'Player x wins!'
+	elif board[0] == board[3] == board[6]:
+		print 'Player {symbol} wins!'.format(symbol=board[0])
 		return True
-	elif board[1] == board[4] == board[7] == 'x':
-		print 'Player x wins!'
+	elif board[1] == board[4] == board[7]:
+		print 'Player {symbol} wins!'.format(symbol=board[1])
 		return True
-	elif board[2] == board[5] == board[8] == 'x':
-		print 'Player x wins!'
+	elif board[2] == board[5] == board[8]:
+		print 'Player {symbol} wins!'.format(symbol=board[2])
 		return True
-	elif board[0] == board[4] == board[8] == 'x':
-		print 'Player x wins!'
+	elif board[0] == board[4] == board[8]:
+		print 'Player {symbol} wins!'.format(symbol=board[0])
 		return True
-	elif board[2] == board[4] == board[6] == 'x':
-		print 'Player x wins!'
-		return True
-	elif board[0] == board[1] == board[2] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[3] == board[4] == board[5] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[6] == board[7] == board[8] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[0] == board[3] == board[6] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[1] == board[4] == board[7] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[2] == board[5] == board[8] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[0] == board[4] == board[8] == 'o':
-		print 'Player o wins!'
-		return True
-	elif board[2] == board[4] == board[6] == 'o':
-		print 'Player o wins!'
+	elif board[2] == board[4] == board[6]:
+		print 'Player {symbol} wins!'.format(symbol=board[2])
 		return True
 	elif board.count(0) == 0:
 		print 'The game is a tie.'
