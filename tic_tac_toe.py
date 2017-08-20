@@ -51,24 +51,18 @@ def turn_end():
 
 def x_turn():
 	x_moves = input("Player x, indicate your position using an index number.")
-	if x_moves not in range(9):
-		while True:
-			x_moves = input("Choose an integer from 0 to 8.")
-			if x_moves in range(9):
-				break
-	if board[x_moves] != 0:
+	while x_moves not in range(9):
+		x_moves = input("Choose an integer from 0 to 8.")
+	while board[x_moves] != 0:
 		x_moves = input("Space is already taken; choose another.")
 	board[x_moves] = 'x'
 	turn_end()
 
 def o_turn():
 	o_moves = input("Player o, indicate your position using an index number.")
-	if o_moves not in range(9):
-		while True:
-			o_moves = input("Choose an integer from 0 to 8.")
-			if o_moves in range(9):
-				break
-	if board[o_moves] != 0:
+	while o_moves not in range(9):
+		o_moves = input("Choose an integer from 0 to 8.")
+	while board[o_moves] != 0:
 		o_moves = input("Space is already taken; choose another.")
 	board[o_moves] = 'o'
 	turn_end()
