@@ -1,0 +1,105 @@
+8:00 AM|[1]|Bronze Am. Waltz Quarter-Final (23)
+8:04 AM|[2]|Bronze Am. Tango Quarter-Final (23)
+8:08 AM|[3]|Bronze Am. Foxtrot Quarter-Final (23)
+8:12 AM|[4]|Newcomer Am. Waltz Quarter-Final (18)
+8:16 AM|[5]|Newcomer Am. Foxtrot Quarter-Final (17)
+8:20 AM|[1]|Bronze Am. Waltz Semi-Final 
+8:22 AM|[2]|Bronze Am. Tango Semi-Final 
+8:24 AM|[3]|Bronze Am. Foxtrot Semi-Final 
+8:26 AM|[4]|Newcomer Am. Waltz Semi-Final 
+8:28 AM|[5]|Newcomer Am. Foxtrot Semi-Final 
+8:30 AM|[6]|Silver Smooth Semi-Final (WT) (10)
+8:34 AM|[7]|Silver Am. Foxtrot Semi-Final (10)
+8:36 AM|[8]|Silver Am. V. Waltz Semi-Final (11)
+8:38 AM|[4]|Newcomer Am. Waltz Final 
+8:40 AM|[5]|Newcomer Am. Foxtrot Final 
+8:42 AM|[1]|Bronze Am. Waltz Final 
+8:44 AM|[2]|Bronze Am. Tango Final 
+8:46 AM|[3]|Bronze Am. Foxtrot Final 
+8:48 AM|[6]|Silver Smooth Final (WT) 
+8:52 AM|[7]|Silver Am. Foxtrot Final 
+8:54 AM|[8]|Silver Am. V. Waltz Final 
+8:56 AM|[9]|Gold Smooth (WT) (7)
+9:00 AM|[10]|Gold Smooth (FV) (7)
+9:04 AM|[11]|Pre-Champ Smooth (WTFV) (1)
+9:12 AM|[12]|Championship Smooth (WTFV) (3)
+9:35 AM|[13]|Bronze Intl. Waltz Semi-Final (10)
+9:37 AM|[14]|Bronze Intl. Tango Semi-Final (10)
+9:39 AM|[15]|Bronze Intl. Quickstep Semi-Final (10) 
+9:41 AM|[16]|Silver Standard Quarter-Final (WQ) (14)
+9:49 AM|[17]|Silver Intl. Tango Quarter-Final (14)
+9:53 AM|[18]|Silver Intl. Foxtrot Quarter-Final (16)
+9:57 AM|[19]|Syllabus Intl. V. Waltz Quarter-Final (17)
+10:01 AM|[20]|Newcomer Intl. Waltz Semi-Final (12)
+10:03 AM|[21]|Newcomer Intl. Tango Semi-Final (11)
+10:05 AM|[16]|Silver Standard Semi-Final (WQ) 
+10:09 AM|[17]|Silver Intl. Tango Semi-Final 
+10:11 AM|[18]|Silver Intl. Foxtrot Semi-Final 
+10:13 AM|[19]|Syllabus Intl. V. Waltz Semi-Final 
+10:15 AM|[20]|Newcomer Intl. Waltz Final 
+10:17 AM|[21]|Newcomer Intl. Tango Final 
+10:19 AM|[13]|Bronze Intl. Waltz Final 
+10:21 AM|[14]|Bronze Intl. Tango Final 
+10:23 AM|[15]|Bronze Intl. Quickstep Final 
+10:25 AM|[16]|Silver Standard Final (WQ) 
+10:29 AM|[17]|Silver Intl. Tango Final 
+10:31 AM|[18]|Silver Intl. Foxtrot Final 
+10:33 AM|[19]|Syllabus Intl. V. Waltz Final 
+10:35 AM|[22]|Pre-Champ Standard (WTVFQ) (5)
+10:45 AM|[23]|Gold Standard (WQ) (1)
+10:49 AM|[24]|Gold Standard (TF) (1)
+10:53 AM|[25]|Championship Standard (WTVFQ) (1)
+12:18 PM|[26]|Bronze Am. Cha Cha Quarter-Final (26)
+12:22 PM|[27]|Bronze Am. Rumba Quarter-Final (25)
+12:26 PM|[28]|Bronze Am. Swing Quarter-Final (27)
+12:32 PM|[29]|Newcomer Am. Cha Cha Quarter-Final (17)
+12:36 PM|[30]|Newcomer Am. Swing Quarter-Final (18)
+12:40 PM|[31]|Silver Rhythm Semi-Final (CR) (10)
+12:44 PM|[32]|Silver Am. Swing Semi-Final (11)
+12:46 PM|[33]|Silver Am. Mambo Quarter-Final (13)
+12:48 PM|[34]|Syllabus Am. Bolero Semi-Final (12)
+12:50 PM|[29]|Newcomer Am. Cha Cha Semi-Final 
+12:52 PM|[30]|Newcomer Am. Swing Semi-Final 
+12:54 PM|[26]|Bronze Am. Cha Cha Semi-Final 
+12:56 PM|[27]|Bronze Am. Rumba Semi-Final 
+12:58 PM|[28]|Bronze Am. Swing Semi-Final 
+1:00 PM|[33]|Silver Am. Mambo Semi-Final 
+1:02 PM|[29]|Newcomer Am. Cha Cha Final 
+1:04 PM|[30]|Newcomer Am. Swing Final 
+1:06 PM|[26]|Bronze Am. Cha Cha Final 
+1:08 PM|[27]|Bronze Am. Rumba Final 
+1:10 PM|[28]|Bronze Am. Swing Final 
+1:12 PM|[32]|Silver Am. Swing Final 
+1:14 PM|[33]|Silver Am. Mambo Final 
+1:16 PM|[31]|Silver Rhythm Final (CR) 
+1:20 PM|[34]|Syllabus Am. Bolero Final 
+1:22 PM|[35]|Pre-Champ Rhythm (CRSBM) (1)
+1:32 PM|[36]|Gold Rhythm (CR) (7)
+1:36 PM|[37]|Gold Rhythm (SM) (6)
+1:40 PM|[38]|Championship Rhythm (CRSBM) (1)
+2:05 PM|[39]|Bronze Intl. Cha Cha Semi-Final (13)
+2:07 PM|[40]|Bronze Intl. Rumba Semi-Final (13)
+2:09 PM|[41]|Bronze Intl. Jive Semi-Final (12)
+2:11 PM|[42]|Silver Latin Quarter-Final (CR) (13)
+2:15 PM|[43]|Silver Intl. Samba Quarter-Final (17)
+2:19 PM|[44]|Silver Intl. Jive Quarter-Final (13)
+2:21 PM|[45]|Newcomer Intl. Cha Cha Semi-Final (12)
+2:23 PM|[46]|Newcomer Intl. Rumba Semi-Final (12)
+2:25 PM|[42]|Silver Latin Semi-Final (CR) 
+2:29 PM|[43]|Silver Intl. Samba Semi-Final 
+2:31 PM|[44]|Silver Intl. Jive Semi-Final 
+2:33 PM|[47]|Syllabus Intl. Paso Doble Semi-Final (13)
+2:35 PM|[45]|Newcomer Intl. Cha Cha Final 
+2:37 PM|[46]|Newcomer Intl. Rumba Final 
+2:39 PM|[39]|Bronze Intl. Cha Cha Final 
+2:41 PM|[40]|Bronze Intl. Rumba Final 
+2:43 PM|[41]|Bronze Intl. Jive Final 
+2:45 PM|[42]|Silver Latin Final (CR) 
+2:49 PM|[43]|Silver Intl. Samba Final 
+2:51 PM|[44]|Silver Intl. Jive Final 
+2:53 PM|[47]|Syllabus Intl. Paso Doble Final 
+2:55 PM|[48]|Pre-Champ Latin (SCRJ) (4)
+3:03 PM|[49]|Pre-Champ Intl. Paso Doble (2)
+3:05 PM|[50]|Gold Latin (CR) (4)
+3:09 PM|[51]|Gold Latin (SJ) (4)
+3:13 PM|[52]|Championship Latin (SCRPJ) (2)
